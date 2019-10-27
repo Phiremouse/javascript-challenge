@@ -2,15 +2,17 @@
 var tableData = data;
 
 // YOUR CODE HERE!
-// from data.js
-var tableData = data;
-
-// YOUR CODE HERE!
 var FilterBtn = d3.select('#filter-btn');
 var tbody = d3.select('tbody');
 var FilterField = d3.select('input');
 
-//todo:transform special characters into symbols again
+// var state = d3.select("#state")
+// statevalue = d3.map(tableData, row => row.state).keys();
+// s_statevalue = statevalue.sort();
+// s_statevalue.forEach((element)=>{
+//     var row = state.append('option');
+//     row.text(element)
+// });
 
 function HandleChange(event){
     tbody.text('');
@@ -43,3 +45,8 @@ function MyEnter(event){
 FilterBtn.on("click",HandleChange);
 FilterField.on('change',HandleChange);
 FilterField.on('pressed',MyEnter);
+
+
+// d3.selectall('select').on('load',()=>{
+
+// })
